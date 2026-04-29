@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multimedia Forensics</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="sidebar">
+    <h2>ADWISE Lab</h2>
+    <a href="../index.html">Home</a>
+    <a href="../people.html">People</a>
+    <a href="../research.html" class="active">Research</a>
+    <a href="../news.html">News</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+  <main class="content project-page">
+    
+
+  <!-- BACK BUTTON -->
+    <button class="back-button" onclick="goBack()">← Back to Research</button>
+
+    <h1 class="page-title">
+      Multimedia Forensics: Source Camera Identification
+    </h1>
+
+    <p><strong>Keywords:</strong> digital forensics, artificial intelligence (AI), computer vision</p>
+
+    <p><strong>Personnel:</strong> Maryna Veksler, Clara Caspard, Eitan Flor, Ramazan Aygun, Kemal Akkaya</p>
+
+    <p><strong>Grant:</strong> US National Science Foundation and the Army Research Office.  </p>
+
+    <h2>Project Summary</h2>
+    <p>Multimedia forensics gained attention due to the wide usage of various recording sources and IoT devices. At the same time, the rapid technological developments caused the escalation of forgeries and data tampering of media files. Therefore, the integrity and origin of video and image data coming from cameras which may be on drones or smartphones became one of the key challenges in digital forensics. The lenses’ defects introduced during the manufacturing process produce unique patterns, namely fingerprints, that can be used for source camera identification. </p>
+
+<p>For a long time, the photo response non-uniformity (PRNU) detection techniques were used to generate a unique camera fingerprint and then use it as a ground truth. While PRNU is still widely applied for image source camera detection, it has proven less effective for videos. Deep Learning (DL) techniques, specifically Convolutional Neural Networks (CNNs) have been applied. Unlike PRNUs, CNNs allow to effectively extract camera-specific features from a given set of videos, while reducing the impact of compression effects.  </p>
+
+<p>This project focuses on enhancing the accuracy of CNN applications for video source camera identification. Moreover, we analyze the network’s resistance against the source camera falsification attacks, to further strengthen the proposed framework. To improve the network, we conduct an interpretability analysis of the designed video source identification network. As a result, we identify how CNN “makes its decisions” and make it more robust and lightweight. </p>
+
+    <h2>Diagram</h2>
+    <img src="../projects/projects_images/multimedia_forensics_project.png" style="max-width: 100%; height: auto;" alt="Project Diagram">
+
+    <h2>Publications</h2>
+    <ul>
+      <li>Veksler, M., Akkaya, K. and Uluagac, S., 2026. Digital Forensic AI You Can Explain: A Case Study on Video Source Camera Identification. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (pp. 7030-7039).</li>
+      <li>Veksler, M., Aygun, R.S., Akkaya, K. and Iyengar, S.S., 2024. A Convolutional Neural Network Ensemble for Video Source Camera Forensics. IEEE MultiMedia, 31(2), pp.26-35.</li>
+      <li>M. Veksler, R. Aygun, K. Akkaya and S. Iyengar, “Video Origin Camera Identification using Ensemble CNNs of Positional Patches,” 2022 IEEE 5th International Conference on Multimedia Information Processing and Retrieval (MIPR), 2022, pp. 41-46, doi: 10.1109/MIPR54900.2022.00015</li>
+      <li>Veksler, M., Caspard, C., Akkaya, K.: “Image-to-Image Translation Generative Adversarial Networks for Video Source Camera Falsification” submitted to EAI International Conference on Digital Forensics & Cyber Crime (ICDF2C) 2022 Conference</li>
+      <li>E. Flor, R. Aygun, S. Mercan and K. Akkaya, “PRNU-based Source Camera Identification for Multimedia Forensics,” 2021 IEEE 22nd International Conference on Information Reuse and Integration for Data Science (IRI), 2021, pp. 168-175, doi: 10.1109/IRI51335.2021.00029</li>
+    </ul>
+
+  </main>
+</div>
+
+<script>
+function goBack() {
+  window.location.href = "../research.html";
+}
+</script>
+
+</body>
+</html>

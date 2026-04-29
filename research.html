@@ -6,23 +6,127 @@
   <title>Research | My Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
   <nav class="sidebar">
-    <h2>My Website</h2>
+    <h2>ADWISE Lab</h2>
     <a href="index.html">Home</a>
     <a href="people.html">People</a>
     <a href="research.html" class="active">Research</a>
+    <a href="news.html">News</a>
     <a href="publications.html">Publications</a>
     <a href="contact.html">Contact Us</a>
   </nav>
 
   <main class="content">
     <h1>Research</h1>
+    <hr style="border: none; border-top: 5px solid black;">
+
     <p>Overview of research areas and projects.</p>
+
+    <!-- SEARCH + FILTER -->
+    <div class="research-controls">
+      <input type="text" id="searchInput" placeholder="Search projects...">
+
+      <select id="filterSelect">
+        <option value="all">All Projects</option>
+        <option value="current">Current</option>
+        <option value="past">Past</option>
+      </select>
+    </div>
+
+    <!-- ===== CURRENT PROJECTS ===== -->
+  <section id="current-section">
+    <h2 class="section-title">Current Projects</h2>
+    <ol class="project-list">
+
+      <li class="project-item" 
+          data-type="current"
+          data-title="LLM-Driven Data Labeling for Training Machine Learning Models"
+          data-keywords="large language models llm networking datasets"
+          data-personnel="karki akkaya sahin">
+        <a href="projects/llm_data_labeling.html">
+          LLM-Driven Data Labeling for Training Machine Learning Models
+        </a>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ===== PAST PROJECTS ===== -->
+  <section id="past-section">
+    <h2 class="section-title">Past Projects</h2>
+    <ol class="project-list">
+
+      <li class="project-item" 
+          data-type="past"
+          data-title="Multimedia Forensics: Source Camera Identification"
+          data-keywords="digital forensics ai artificial intelligence computer vision"
+          data-personnel="veksler caspard flor aygun akkaya">
+        <a href="projects/multimedia_forensics.html">
+          Multimedia Forensics: Source Camera Identification
+        </a>
+      </li>
+
+    </ol>
+  </section>
   </main>
 </div>
+
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const filterSelect = document.getElementById("filterSelect");
+
+const projects = document.querySelectorAll(".project-item");
+
+const currentSection = document.getElementById("current-section");
+const pastSection = document.getElementById("past-section");
+
+function filterProjects() {
+  const searchText = searchInput.value.toLowerCase().trim();
+  const filterValue = filterSelect.value;
+
+  let currentVisible = false;
+  let pastVisible = false;
+
+  projects.forEach(project => {
+    const title = project.dataset.title.toLowerCase();
+    const keywords = project.dataset.keywords.toLowerCase();
+    const personnel = project.dataset.personnel.toLowerCase();
+    const type = project.dataset.type;
+
+    const matchesSearch =
+      title.includes(searchText) ||
+      keywords.includes(searchText) ||
+      personnel.includes(searchText);
+
+    const matchesFilter =
+      filterValue === "all" || filterValue === type;
+
+    if (matchesSearch && matchesFilter) {
+      project.style.display = "list-item";
+
+      if (type === "current") currentVisible = true;
+      if (type === "past") pastVisible = true;
+
+    } else {
+      project.style.display = "none";
+    }
+  });
+
+  // Show/hide entire sections cleanly
+  currentSection.style.display = currentVisible ? "block" : "none";
+  pastSection.style.display = pastVisible ? "block" : "none";
+}
+
+// Events
+searchInput.addEventListener("input", filterProjects);
+filterSelect.addEventListener("change", filterProjects);
+</script>
+
 
 </body>
 </html>

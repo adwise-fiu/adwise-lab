@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM-Driven Data Labeling</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="sidebar">
+    <h2>ADWISE Lab</h2>
+    <a href="../index.html">Home</a>
+    <a href="../people.html">People</a>
+    <a href="../research.html" class="active">Research</a>
+    <a href="../news.html">News</a>
+    <a href="../publications.html">Publications</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+  <main class="content project-page">
+    <!-- BACK BUTTON -->
+    <button class="back-button" onclick="goBack()">← Back to Research</button>
+
+    <h1 class="page-title">
+      LLM-Driven Data Labeling for Training Machine Learning Models
+    </h1>
+
+    <p><strong>Keywords:</strong> large language models (LLMs), networking, datasets</p>
+
+    <p><strong>Personnel:</strong> Bigyan Karki, Kemal Akkaya, Hadi Sahin</p>
+
+    <p><strong>Grant:</strong> US National Science Foundation Cybersecurity Innovation for Cyberinfrastructure (CICI)</p>
+
+    <h2>Project Summary</h2>
+    <p>The LLMDaL project leverages generative Artificial Intelligence (AI) along with data from the AmLight international research and education (R&E) network to provide an essential and previously unavailable building block necessary for automated network defense. The growing complexity and sophistication of modern networks are driving the need for automated cybersecurity and management.  Operators of critical infrastructure must increasingly rely on AI to cope with the sheer scale of information and the growing use of AI by adversaries. However, effective AI defenses depend on both the quantity and quality of data for training.  The lack of high-quality, labeled datasets from production environments presents a significant barrier. Without access to such datasets, advanced models often remain untested in real-world scenarios, limiting their effectiveness, as they fail to learn the complexity and uncertainty of production environments. Consequently, AI models essential for critical infrastructure defense will fail. </p>
+
+    <p>LLMDaL utilizes Large Language Models (LLMs) to automatically label packet-level data collected from AmLight maintained at Florida International University. Technical, financial and privacy challenges of providing such data remain substantial. To accurately and quickly label this real-world data, open-source LLMs are fine-tuned using data gathered from AmLight, along with known threat signatures, and expert-annotated cybersecurity events. Validation is performed through a Retrieval-Augmented Self-Refinement process, cross-checking with an ensemble of LLMs, and verification through a human-in-the-loop approach.  LLMDaL fills a critical gap in automating dataset labeling, enabling effective testing of AI models for real-world environments. LLMDaL will release datasets from AmLight in batches to reflect the evolving threat landscape.</p>
+
+    <!-- <h2>Diagram</h2> -->
+    <img src="../images/placeholder.png" alt="Project Images">
+
+  </main>
+</div>
+
+<script>
+function goBack() {
+  window.location.href = "../research.html";
+}
+</script>
+
+</body>
+</html>
